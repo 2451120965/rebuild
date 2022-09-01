@@ -1,0 +1,48 @@
+// 此文件为全局的一些公用样式 往往用于确定设置项目的风格
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    height: 100%;
+    // font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    font-family: pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui, microsoft yahei, simsun, sans-serif;
+  }
+  body a, body article, body aside, body b, body blockquote, body dd, body div, body dl, body dt, body em, body footer, body h1, body h2, body h3, body h4, body h5, body h6, body header, body i, body img, body li, body main, body menu, body nav, body ol, body p, body pre, body q, body section, body span, body u, body ul, html a, html article, html aside, html b, html blockquote, html dd, html div, html dl, html dt, html em, html footer, html h1, html h2, html h3, html h4, html h5, html h6, html header, html i, html img, html li, html main, html menu, html nav, html ol, html p, html pre, html q, html section, html span, html u, html ul {
+    text-decoration: none;
+    font-style: normal;
+  }
+  .van-toast {
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+  }
+
+  .el-loading-parent--hidden {
+    overflow: scroll !important;
+  }
+  ul,ol,li{list-style:none;}
+  .customScrollBar {
+    &::-webkit-scrollbar {
+      width: 10px; /*滚动条宽度*/
+      height: 10px; /*滚动条高度*/
+    }
+    &::-webkit-scrollbar-track {
+      /*滚动条的背景区域的内阴影*/
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) inset;
+      /*滚动条的背景区域的圆角*/
+      border-radius: 5px;
+      /*滚动条的背景颜色*/
+      background-color: #eee;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条的内阴影*/
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3) inset;
+      /*滚动条的圆角*/
+      border-radius: 5px;
+      /*滚动条的背景颜色*/
+      background-color: #ddd;
+    }
+  }

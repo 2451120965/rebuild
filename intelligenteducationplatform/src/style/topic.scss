@@ -1,0 +1,45 @@
+.topic-list {
+  font-size: 18px;
+  word-break: break-all;
+
+  img {
+    vertical-align: middle;
+  }
+
+  .topic-item {
+    margin-bottom: 24px;
+    padding-left: 24px;
+    position: relative;
+
+    .topic-key {
+      position: absolute;
+      left: 0px;
+      top: 3px;
+    }
+
+    .select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .select-item {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 16px;
+
+        &-key {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  .paint {
+    height: 140px;
+  }
+
+  // .paint:last-child {
+  //   height: 0px;
+  // }
+}

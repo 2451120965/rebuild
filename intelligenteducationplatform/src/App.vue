@@ -4,25 +4,23 @@
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import store from '@/store/index.js'
+export default {
+  mounted () {
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+      localStorage.setItem("isMobile", 0)
+      store.commit("common/SET_ISMOBILE", true)
+    } else {
+      localStorage.setItem("isMobile", 1)
+      store.commit("common/SET_ISMOBILE", false)
+    }
+  }
 }
+</script>
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style lang="scss">
+  @import "/assets/css/iconfont.css";
+  @import '/assets/font/iconfont.css';
+  @import "./style/global.scss";
 </style>

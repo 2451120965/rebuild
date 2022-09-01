@@ -2,7 +2,7 @@ import axios from "axios";
 import router from "@/router";
 import { Message } from 'element-ui';
 import qs from "qs";
-import store from "@/store/index";
+import store from "@/store/index.js";
 
 const jsonlist = [
   "/homework/recordhomeworktopic",
@@ -155,7 +155,7 @@ export function request(config) {
       }
       if (toast) {
         let toastType = (code === 200 ? "success" : "error");
-        let toastStr = (code === 200 ? toast : toastError);
+        let toastStr = (code === 200 ? toast : "error");
         if (message) {
           Message[toastType](message);
         } else {

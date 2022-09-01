@@ -13,7 +13,7 @@
       </div>
       <div class="main-header-right">
         <div class="router-title">
-          <router-link to="/guideDoc">帮助文档</router-link>
+          <div class="guide" @click="toGuide"><i class="el-icon-document">帮助文档</i></div>
         </div>
         <div class="header-login">
           <el-popover placement="top-start" title="用户信息" width="200" trigger="hover">
@@ -55,6 +55,12 @@ export default {
     };
   },
   methods: {
+    showLoginFrom() {
+      if(this.$route.name !== "login") this.$router.push("/login")
+    },
+    toGuide() {
+      this.$router.push('/guideDoc')
+    }
   }
 }
 </script>
@@ -163,6 +169,10 @@ export default {
         color: #fff;
         line-height: 64px;
         position: relative;
+        .guide {
+          cursor: pointer;
+          white-space: nowrap;
+        }
       }
 
       .header-login {
